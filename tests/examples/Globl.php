@@ -139,14 +139,14 @@ final class Globl extends Example
         self::check_call($get_var_i64_export, 78);
     }
 
-    public static function check(Wasm\Val $val, int | float $expected): void
+    public static function check(Wasm\Val $val, int|float $expected): void
     {
         $actual = $val->value();
 
         self::assertTrue($actual === $expected, sprintf('%s !== %s', var_export($actual, true), var_export($expected, true)));
     }
 
-    public static function check_global(Wasm\Globl $global, int | float $expected): void
+    public static function check_global(Wasm\Globl $global, int|float $expected): void
     {
         self::check($global->get(), $expected);
     }

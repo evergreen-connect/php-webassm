@@ -4,12 +4,12 @@
 
 namespace Wasm\Vec;
 
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 // Type Representations
 
 final class ExportType implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrExporttypes = null)
+    public function __construct(array|int|null $sizeOrExporttypes = null)
     {
     }
 
@@ -47,7 +47,7 @@ final class ExportType implements \Countable, \ArrayAccess
 
 final class ExternType implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrExterntypes = null)
+    public function __construct(array|int|null $sizeOrExterntypes = null)
     {
     }
 
@@ -85,7 +85,7 @@ final class ExternType implements \Countable, \ArrayAccess
 
 final class FuncType implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrFunctypes = null)
+    public function __construct(array|int|null $sizeOrFunctypes = null)
     {
     }
 
@@ -123,7 +123,7 @@ final class FuncType implements \Countable, \ArrayAccess
 
 final class GlobalType implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrGlobaltypes = null)
+    public function __construct(array|int|null $sizeOrGlobaltypes = null)
     {
     }
 
@@ -161,7 +161,7 @@ final class GlobalType implements \Countable, \ArrayAccess
 
 final class ImportType implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrImporttypes = null)
+    public function __construct(array|int|null $sizeOrImporttypes = null)
     {
     }
 
@@ -199,7 +199,7 @@ final class ImportType implements \Countable, \ArrayAccess
 
 final class MemoryType implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrMemorytypes = null)
+    public function __construct(array|int|null $sizeOrMemorytypes = null)
     {
     }
 
@@ -237,7 +237,7 @@ final class MemoryType implements \Countable, \ArrayAccess
 
 final class TableType implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrTabletypes = null)
+    public function __construct(array|int|null $sizeOrTabletypes = null)
     {
     }
 
@@ -275,7 +275,7 @@ final class TableType implements \Countable, \ArrayAccess
 
 final class ValType implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrValtypes = null)
+    public function __construct(array|int|null $sizeOrValtypes = null)
     {
     }
 
@@ -311,12 +311,12 @@ final class ValType implements \Countable, \ArrayAccess
     }
 }
 
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 // Runtime Objects
 
 final class Extern implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrExterns = null)
+    public function __construct(array|int|null $sizeOrExterns = null)
     {
     }
 
@@ -354,7 +354,7 @@ final class Extern implements \Countable, \ArrayAccess
 
 final class Frame implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrFrames = null)
+    public function __construct(array|int|null $sizeOrFrames = null)
     {
     }
 
@@ -392,7 +392,7 @@ final class Frame implements \Countable, \ArrayAccess
 
 final class Val implements \Countable, \ArrayAccess
 {
-    public function __construct(array | int | null $sizeOrVals = null)
+    public function __construct(array|int|null $sizeOrVals = null)
     {
     }
 

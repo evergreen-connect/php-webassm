@@ -39,4 +39,4 @@ $args = new Wasm\Vec\Val([$arg->inner()]);
 echo 'Calling `add_one` function...'.PHP_EOL;
 $result = $addOne($args);
 
-echo 'Results of `add_one`: '.((new Wasm\Val($result[0]))->value()).PHP_EOL;
+echo 'Results of `add_one`: '.(new Wasm\Val($result[0]))->value().PHP_EOL;

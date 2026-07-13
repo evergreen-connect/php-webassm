@@ -63,7 +63,7 @@ try {
     echo 'Setting value to `one` did not error'.PHP_EOL;
 
     exit(1);
-} catch (\Wasm\Exception\RuntimeException $exception) {
+} catch (Wasm\Exception\RuntimeException $exception) {
     assert('RuntimeError: Attempted to set an immutable global' === $exception->getMessage());
 }
 

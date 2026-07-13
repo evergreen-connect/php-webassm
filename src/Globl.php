@@ -92,7 +92,7 @@ final class Globl
     /**
      * @api
      */
-    public function set(int | float | Val $value): void
+    public function set(int|float|Val $value): void
     {
         if (!$value instanceof Val) {
             $globaltype = $this->type();
@@ -122,7 +122,7 @@ final class Globl
     /**
      * @api
      */
-    public static function new(Store $store, GlobalType $globaltype, int | float | Val $val): self
+    public static function new(Store $store, GlobalType $globaltype, int|float|Val $val): self
     {
         if ($val instanceof Val) {
             return new self(\wasm_global_new($store->inner(), $globaltype->inner(), $val->inner()));

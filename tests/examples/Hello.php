@@ -27,7 +27,7 @@ final class Hello extends Example
         $wasm = file_get_contents($this->module('wasm'));
 
         // Compiling module...
-        $module = Wasm\Module::new($store, $wasm);
+        $module = Module::new($store, $wasm);
 
         $functype = Wasm\Type\FuncType::new(new Wasm\Vec\ValType(), new Wasm\Vec\ValType());
         $func = Wasm\Func::new($store, $functype, [self::class, 'hello_callback']);

@@ -41,8 +41,6 @@ final class ExternType
     /**
      * Create a Wasm\Type\ExternType from a `wasm_externtype_t` resource.
      *
-     * @param $functype resource a `wasm_externtype_t` resource
-     *
      * @throw Exception\InvalidArgumentException If the `$externtype` argument is not a valid `wasm_externtype_t` resource
      */
     public function __construct($externtype)

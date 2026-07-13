@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Wasm\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Wasm;
 use Wasm\Exception;
 use Wasm\Type;
 use Wasm\Vec;
@@ -31,7 +30,7 @@ final class FuncType extends TestCase
      */
     public function construct(): void
     {
-        $functype = wasm_functype_new(new Wasm\Vec\ValType(), new Wasm\Vec\ValType());
+        $functype = wasm_functype_new(new Vec\ValType(), new Vec\ValType());
 
         self::assertIsObject(new Type\FuncType($functype));
 
@@ -79,7 +78,7 @@ final class FuncType extends TestCase
      */
     public function inner(): void
     {
-        $functype = \wasm_functype_new(new Wasm\Vec\ValType(), new Wasm\Vec\ValType());
+        $functype = \wasm_functype_new(new Vec\ValType(), new Vec\ValType());
 
         self::assertSame((new Type\FuncType($functype))->inner(), $functype);
     }

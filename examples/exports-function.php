@@ -40,4 +40,4 @@ $args = new Wasm\Vec\Val([$firstArg->inner(), $secondArg->inner()]);
 echo 'Calling `sum` function...'.PHP_EOL;
 $result = $sum($args);
 
-echo 'Results of `sum`: '.((new Wasm\Val($result[0]))->value()).PHP_EOL;
+echo 'Results of `sum`: '.(new Wasm\Val($result[0]))->value().PHP_EOL;

@@ -25,7 +25,7 @@ final class Engine extends TestCase
         self::assertIsObject(Wasm\Engine::new($config));
 
         // TODO(jubianchi): Enable all compilers
-        $compilers = [Wasm\Config::COMPILER_CRANELIFT/*, Wasm\Config::COMPILER_LLVM, Wasm\Config::COMPILER_SINGLEPASS*/];
+        $compilers = [Wasm\Config::COMPILER_CRANELIFT/* , Wasm\Config::COMPILER_LLVM, Wasm\Config::COMPILER_SINGLEPASS */];
         $engines = [Wasm\Config::ENGINE_JIT, Wasm\Config::ENGINE_NATIVE, Wasm\Config::ENGINE_OBJECT_FILE];
 
         foreach ($compilers as $compiler) {

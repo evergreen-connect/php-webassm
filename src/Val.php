@@ -65,7 +65,7 @@ final class Val
     /**
      * @api
      */
-    public function value(): int | float
+    public function value(): int|float
     {
         return \wasm_val_value($this->inner);
     }

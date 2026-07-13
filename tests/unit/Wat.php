@@ -10,6 +10,7 @@ use Wasm\Exception;
 
 /**
  * @test
+ *
  * @small
  */
 final class Wat extends TestCase
