@@ -1,0 +1,3 @@
+src/compat.lo: /home/toby/Documents/code/wasmer-php/ext/src/compat.c \
+ /home/toby/Documents/code/wasmer-php/ext/include/wasmer.h \
+ /home/toby/Documents/code/wasmer-php/ext/include/wasm.h

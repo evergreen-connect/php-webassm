@@ -1,0 +1,52 @@
+{
+  "name": "evergreen-connect/php-webassm",
+  "description": "PHP bindings for the Wasmer WebAssembly runtime",
+  "type": "library",
+  "require": {
+    "php": ">=8.3",
+    "ext-wasm": "^1.0.0"
+  },
+  "require-dev": {
+    "phpdocumentor/phpdocumentor": "3.10.0",
+    "phpdocumentor/flyfinder": "2.0.0",
+    "friendsofphp/php-cs-fixer": "3.95.13",
+    "phpunit/phpunit": "13.2.4"
+  },
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wasmer Engineering Team",
+      "email": "engineering@wasmer.io"
+    }
+  ],
+  "homepage": "https://github.com/evergreen-connect/php-webassm",
+  "support": {
+    "issues": "https://github.com/evergreen-connect/php-webassm/issues",
+    "source": "https://github.com/evergreen-connect/php-webassm"
+  },
+  "config": {
+    "platform": {
+      "ext-wasm": "1.0.0"
+    },
+    "cache-dir": "target/cache/composer",
+    "allow-plugins": {
+      "symfony/flex": false
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Wasm\\": "src"
+    }
+  },
+  "replace": {
+    "php-wasm/php-wasm": "*",
+    "wasm/wasm": "*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wasm\\Tests\\": "tests/unit",
+      "Wasm\\Examples\\": "tests/examples"
+    }
+  }
+}
