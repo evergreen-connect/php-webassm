@@ -9,7 +9,8 @@
   "require-dev": {
     "phpdocumentor/phpdocumentor": "3.10.0",
     "friendsofphp/php-cs-fixer": "3.95.13",
-    "phpunit/phpunit": "^11.5"
+    "phpunit/phpunit": "^11.5",
+    "cweagans/composer-patches": "^1.7"
   },
   "minimum-stability": "stable",
   "license": "MIT",
@@ -30,7 +31,15 @@
     },
     "cache-dir": "target/cache/composer",
     "allow-plugins": {
-      "symfony/flex": false
+      "symfony/flex": false,
+      "cweagans/composer-patches": true
+    }
+  },
+  "extra": {
+    "patches": {
+      "phpdocumentor/phpdocumentor": {
+        "Fix UriFactory::createUri() not attaching a file:// scheme to absolute unix paths, which breaks phpdoc.xml config resolution under league/uri ^7 (https://github.com/phpDocumentor/phpDocumentor/issues)": "patches/phpdocumentor-uri-scheme.patch"
+      }
     }
   },
   "autoload": {

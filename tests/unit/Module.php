@@ -115,7 +115,7 @@ final class Module extends TestCase
     /**
      * @test
      */
-    public function name(): void
+    public function moduleName(): void
     {
         $wat = '(module (func (export "run")))';
         $wasm = Wat::wasm($wat);

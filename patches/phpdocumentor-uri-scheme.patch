@@ -1,0 +1,13 @@
+--- a/src/phpDocumentor/UriFactory.php
++++ b/src/phpDocumentor/UriFactory.php
+@@ -47,6 +47,10 @@
+                 return LeagueUri::fromWindowsPath($uriString);
+             }
+ 
++            if (str_starts_with($uriString, '/') && ! str_contains($uriString, '://')) {
++                return LeagueUri::new('file://' . $uriString);
++            }
++
+             return LeagueUri::new($uriString);
+         } catch (Throwable $exception) {
+             throw new InvalidArgumentException(

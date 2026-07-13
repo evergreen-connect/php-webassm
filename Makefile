@@ -51,8 +51,17 @@ lint: ## Run CS lint on all PHP files
 lint: vendor/friendsofphp/php-cs-fixer/php-cs-fixer target/cache/php-cs-fixer
 	$(PHP_EXECUTABLE) $(PHP_TEST_SETTINGS) $< fix --dry-run --allow-risky=yes -v
 
-.phpdoc/build/index.html: vendor/phpdocumentor/phpdocumentor/bin/phpdoc phpdoc.dist.xml target/cache/phpdocumentorr ext/src/wasmer_*.stub.php src/*.php src/Exception/*.php src/Type/*.php
-	$(PHP_EXECUTABLE) $<
+.SILENT: target/phpdoc.xml
+target/phpdoc.xml: phpdoc.dist.xml
+	mkdir -p target
+	sed \
+		-e 's#dsn="\."#dsn="$(CURDIR)"#' \
+		-e 's#<output>target/doc</output>#<output>$(CURDIR)/target/doc</output>#' \
+		-e 's#<cache>target/cache/phpdocumentor</cache>#<cache>$(CURDIR)/target/cache/phpdocumentor</cache>#' \
+		phpdoc.dist.xml > target/phpdoc.xml
+
+.phpdoc/build/index.html: vendor/phpdocumentor/phpdocumentor/bin/phpdoc target/phpdoc.xml target/cache/phpdocumentorr ext/src/wasmer_*.stub.php src/*.php src/Exception/*.php src/Type/*.php
+	$(PHP_EXECUTABLE) $< --config=target/phpdoc.xml
 
 vendor/phpdocumentor/phpdocumentor/bin/phpdoc vendor/friendsofphp/php-cs-fixer/php-cs-fixer vendor/phpunit/phpunit/phpunit: vendor/composer/installed.json
 
