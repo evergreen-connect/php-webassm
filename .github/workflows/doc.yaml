@@ -27,7 +27,7 @@ jobs:
           key: php-8.3-composer-${{ hashFiles('composer.json') }}
 
       - name: Install Composer dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer install --no-interaction --prefer-dist --ignore-platform-req=php
 
       - name: Configure extension
         run: make ext/configure

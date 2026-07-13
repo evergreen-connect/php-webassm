@@ -8,9 +8,8 @@
   },
   "require-dev": {
     "phpdocumentor/phpdocumentor": "3.10.0",
-    "phpdocumentor/flyfinder": "2.0.0",
     "friendsofphp/php-cs-fixer": "3.95.13",
-    "phpunit/phpunit": "13.2.4"
+    "phpunit/phpunit": "^11.5"
   },
   "minimum-stability": "stable",
   "license": "MIT",
