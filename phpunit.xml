@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd" bootstrap="vendor/autoload.php"
-         colors="true" timeoutForSmallTests="1" cacheResultFile="target/cache/phpunit/result.cache">
-    <coverage processUncoveredFiles="true">
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.5/phpunit.xsd" bootstrap="vendor/autoload.php"
+         colors="true" cacheDirectory="target/cache/phpunit">
+    <source>
         <include>
             <directory>src</directory>
         </include>
-        <report>
-            <html outputDirectory="target/coverage"/>
-        </report>
-    </coverage>
+    </source>
     <testsuites>
         <testsuite name="tests">
             <directory suffix="">tests/unit</directory>

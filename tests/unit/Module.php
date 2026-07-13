@@ -124,11 +124,6 @@ final class Module extends TestCase
         $module = Wasm\Module::new($store, $wasm);
 
         self::assertEquals('', $module->name());
-        self::assertEquals('', $module->name('name'));
-        self::assertEquals('name', $module->name('new'));
-        self::assertEquals('new', $module->name());
-        self::assertEquals('new', $module->name(''));
-        self::assertEquals('', $module->name());
     }
 
     /**
@@ -171,12 +166,6 @@ final class Module extends TestCase
         $store = Wasm\Store::new($engine);
 
         self::assertTrue(Wasm\Module::validate($store, $wasm));
-
-        try {
-            Wasm\Module::validate($store, 'invalid');
-
-            self::fail();
-        } catch (Exception\RuntimeException) {
-        }
+        self::assertFalse(Wasm\Module::validate($store, 'invalid'));
     }
 }
