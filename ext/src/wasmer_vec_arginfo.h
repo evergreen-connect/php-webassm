@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: c91922b8367099241c06823ee02999f66456a775 */
+ * Stub hash: 66fdf85181a558ee7189ec821e0621e884933e27 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Wasm_Vec_ExportType___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_MASK(0, sizeOrExporttypes, MAY_BE_ARRAY|MAY_BE_LONG|MAY_BE_NULL, "null")
@@ -165,7 +165,6 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Wasm_Vec_Val_offsetUnset arginfo_class_Wasm_Vec_ExportType_offsetUnset
 
-
 ZEND_METHOD(Wasm_Vec_ExportType, __construct);
 ZEND_METHOD(Wasm_Vec_ExportType, count);
 ZEND_METHOD(Wasm_Vec_ExportType, offsetExists);
@@ -233,7 +232,6 @@ ZEND_METHOD(Wasm_Vec_Val, offsetGet);
 ZEND_METHOD(Wasm_Vec_Val, offsetSet);
 ZEND_METHOD(Wasm_Vec_Val, offsetUnset);
 
-
 static const zend_function_entry class_Wasm_Vec_ExportType_methods[] = {
 	ZEND_ME(Wasm_Vec_ExportType, __construct, arginfo_class_Wasm_Vec_ExportType___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Wasm_Vec_ExportType, count, arginfo_class_Wasm_Vec_ExportType_count, ZEND_ACC_PUBLIC)
@@ -243,7 +241,6 @@ static const zend_function_entry class_Wasm_Vec_ExportType_methods[] = {
 	ZEND_ME(Wasm_Vec_ExportType, offsetUnset, arginfo_class_Wasm_Vec_ExportType_offsetUnset, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Wasm_Vec_ExternType_methods[] = {
 	ZEND_ME(Wasm_Vec_ExternType, __construct, arginfo_class_Wasm_Vec_ExternType___construct, ZEND_ACC_PUBLIC)
@@ -255,7 +252,6 @@ static const zend_function_entry class_Wasm_Vec_ExternType_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Wasm_Vec_FuncType_methods[] = {
 	ZEND_ME(Wasm_Vec_FuncType, __construct, arginfo_class_Wasm_Vec_FuncType___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Wasm_Vec_FuncType, count, arginfo_class_Wasm_Vec_FuncType_count, ZEND_ACC_PUBLIC)
@@ -265,7 +261,6 @@ static const zend_function_entry class_Wasm_Vec_FuncType_methods[] = {
 	ZEND_ME(Wasm_Vec_FuncType, offsetUnset, arginfo_class_Wasm_Vec_FuncType_offsetUnset, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Wasm_Vec_GlobalType_methods[] = {
 	ZEND_ME(Wasm_Vec_GlobalType, __construct, arginfo_class_Wasm_Vec_GlobalType___construct, ZEND_ACC_PUBLIC)
@@ -277,7 +272,6 @@ static const zend_function_entry class_Wasm_Vec_GlobalType_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Wasm_Vec_ImportType_methods[] = {
 	ZEND_ME(Wasm_Vec_ImportType, __construct, arginfo_class_Wasm_Vec_ImportType___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Wasm_Vec_ImportType, count, arginfo_class_Wasm_Vec_ImportType_count, ZEND_ACC_PUBLIC)
@@ -287,7 +281,6 @@ static const zend_function_entry class_Wasm_Vec_ImportType_methods[] = {
 	ZEND_ME(Wasm_Vec_ImportType, offsetUnset, arginfo_class_Wasm_Vec_ImportType_offsetUnset, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Wasm_Vec_MemoryType_methods[] = {
 	ZEND_ME(Wasm_Vec_MemoryType, __construct, arginfo_class_Wasm_Vec_MemoryType___construct, ZEND_ACC_PUBLIC)
@@ -299,7 +292,6 @@ static const zend_function_entry class_Wasm_Vec_MemoryType_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Wasm_Vec_TableType_methods[] = {
 	ZEND_ME(Wasm_Vec_TableType, __construct, arginfo_class_Wasm_Vec_TableType___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Wasm_Vec_TableType, count, arginfo_class_Wasm_Vec_TableType_count, ZEND_ACC_PUBLIC)
@@ -309,7 +301,6 @@ static const zend_function_entry class_Wasm_Vec_TableType_methods[] = {
 	ZEND_ME(Wasm_Vec_TableType, offsetUnset, arginfo_class_Wasm_Vec_TableType_offsetUnset, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Wasm_Vec_ValType_methods[] = {
 	ZEND_ME(Wasm_Vec_ValType, __construct, arginfo_class_Wasm_Vec_ValType___construct, ZEND_ACC_PUBLIC)
@@ -321,7 +312,6 @@ static const zend_function_entry class_Wasm_Vec_ValType_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Wasm_Vec_Extern_methods[] = {
 	ZEND_ME(Wasm_Vec_Extern, __construct, arginfo_class_Wasm_Vec_Extern___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Wasm_Vec_Extern, count, arginfo_class_Wasm_Vec_Extern_count, ZEND_ACC_PUBLIC)
@@ -332,7 +322,6 @@ static const zend_function_entry class_Wasm_Vec_Extern_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Wasm_Vec_Frame_methods[] = {
 	ZEND_ME(Wasm_Vec_Frame, __construct, arginfo_class_Wasm_Vec_Frame___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Wasm_Vec_Frame, count, arginfo_class_Wasm_Vec_Frame_count, ZEND_ACC_PUBLIC)
@@ -342,7 +331,6 @@ static const zend_function_entry class_Wasm_Vec_Frame_methods[] = {
 	ZEND_ME(Wasm_Vec_Frame, offsetUnset, arginfo_class_Wasm_Vec_Frame_offsetUnset, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Wasm_Vec_Val_methods[] = {
 	ZEND_ME(Wasm_Vec_Val, __construct, arginfo_class_Wasm_Vec_Val___construct, ZEND_ACC_PUBLIC)

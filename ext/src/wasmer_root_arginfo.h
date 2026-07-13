@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 765ae6775c3c8826c236ae1e44558f2eb9c10bbf */
+ * Stub hash: 66c1db00d5380d504b1b3fbb7b64ac9cf2d85d8c */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_wasm_config_new, 0, 0, 0)
 ZEND_END_ARG_INFO()
@@ -458,7 +458,6 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_wat2wasm, 0, 1, IS_STRING, 0)
 	ZEND_ARG_TYPE_INFO(0, wat, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-
 ZEND_FUNCTION(wasm_config_new);
 ZEND_FUNCTION(wasm_config_delete);
 ZEND_FUNCTION(wasm_config_set_compiler);
@@ -590,7 +589,6 @@ ZEND_FUNCTION(wasmer_version_minor);
 ZEND_FUNCTION(wasmer_version_patch);
 ZEND_FUNCTION(wasmer_version_pre);
 ZEND_FUNCTION(wat2wasm);
-
 
 static const zend_function_entry ext_functions[] = {
 	ZEND_FE(wasm_config_new, arginfo_wasm_config_new)
