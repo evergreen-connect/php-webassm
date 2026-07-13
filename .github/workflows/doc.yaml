@@ -3,6 +3,9 @@ name: Documentation
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   documentation:
     name: Documentation
