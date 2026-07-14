@@ -72,8 +72,6 @@ $results = wasm_func_call($run, new Wasm\Vec\Val());
 ```php
 <?php
 
-use Wasm;
-
 require_once __DIR__.'/../vendor/autoload.php';
 
 $engine = Wasm\Engine::new();
@@ -85,7 +83,7 @@ function hello_callback() {
     echo '> Hello World!' . PHP_EOL;
 }
 
-$functype = Wasm\Functype::new(new Wasm\Vec\ValType(), new Wasm\Vec\ValType());
+$functype = Wasm\Type\FuncType::new(new Wasm\Vec\ValType(), new Wasm\Vec\ValType());
 $func = Wasm\Func::new($store, $functype, 'hello_callback');
 
 $extern = $func->asExtern();
@@ -93,7 +91,7 @@ $externs = new Wasm\Vec\Extern([$extern->inner()]);
 $instance = Wasm\Instance::new($store, $module, $externs);
 
 $exports = $instance->exports();
-$run = $exports[0]->asFunc();
+$run = (new Wasm\Extern($exports[0]))->asFunc();
 $results = $run(new Wasm\Vec\Val());
 ```
 
